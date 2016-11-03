@@ -1,0 +1,288 @@
+
+@import url(http://fonts.googleapis.com/css?family=Quicksand:300,400,700);
+.accordion {
+    color: #FFF;
+    width: 100%;
+}
+.accordion .section {
+    width: 100%;
+}
+.accordion .section input[type='radio'] {
+    display: none;
+}
+.accordion .section input[type='radio']:checked + label {
+    background: #363636;
+}
+.accordion .section input[type='radio']:checked + label:before {
+    content: " ";
+    position: absolute;
+    border-left: 3px solid #21CCFC;
+    height: 100%;
+    left: 0;
+}
+.accordion .section input[type='radio']:checked ~ .content {
+    max-height: 300px;
+    opacity: 1;
+    z-index: 10;
+    overflow-y: auto;
+}
+.accordion .section label {
+    position: relative;
+    cursor: pointer;
+    padding: 10px 20px;
+    display: table;
+    background: #222222;
+    width: 100%;
+    -webkit-transition: background 0.3s ease-in-out;
+    -moz-transition: background 0.3s ease-in-out;
+    -ms-transition: background 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+.accordion .section label:before {
+    content: " ";
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 1px;
+    border-top: 1px solid #363636;
+}
+.accordion .section label:hover {
+    background: #363636;
+}
+.accordion .section label span {
+    display: table-cell;
+    vertical-align: middle;
+}
+.accordion .section:last-of-type {
+    border-bottom: 1px solid #363636;
+}
+.accordion .section .content {
+    max-height: 0;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    transition: all 0.4s;
+    opacity: 0;
+    position: relative;
+    overflow-y: hidden;
+}
+
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+body {
+    background: #666;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.left-menu {
+    background: #222;
+    width: 200px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+.work-area {
+    background: #666666;
+    width: inherit;
+    position: relative;
+    left: 200px;
+}
+.bottom {
+    background: #21CCFC;
+    border: 6px;
+    width: 1200px;
+    position: absolute;
+    top: 880px;
+    left: 450px;
+}
+.accordion {
+    font-size: 14px;
+}
+.accordion .section .content {
+    padding: 0 15px;
+}
+.accordion .section input[type='radio'] {
+    display: none;
+}
+.accordion .section input[type='radio']:checked ~ .content {
+    padding: 15px;
+}
+
+ul {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+ul li {
+    padding: 10px;
+}
+ul li i {
+    font-size: 13px;
+    width: 15px;
+    margin-right: 15px;
+}
+ul li:hover {
+    cursor: pointer;
+}
+ul li:hover i {
+    color: #21CCFC;
+}
+
+.logo {
+    padding: 30px 10px;
+    width: 200px;
+    text-align: center;
+    color: #FFF;
+    font-size: 20px;
+}
+.logo i {
+    font-size: 70px;
+    color: #21CCFC;
+}
+
+body { font-family: Helvetica, Arial, sans-serif;
+    margin: 0;
+}
+
+.dropzone-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.dropzone {
+    overflow: hidden;
+    margin: .5em;
+    padding: 1em;
+    color: #666;
+    text-align: center;
+    background: #ccc;
+    line-height: 4em;
+    border: 4px dashed transparent;
+    transition: background .15s linear, border-color .15s linear;
+}
+
+.dropzone.-drop-possible { border-color: #666; }
+
+.dropzone.-drop-over {
+    background: #666;
+    color: #21CCFC;
+}
+
+.draggable {
+    position: relative;
+    z-index: 10;
+    width: 200px;
+    margin: .25em;
+    padding: 1em 2em;
+    background-color: #29e;
+    color: #fff;
+    text-align: center;
+
+    -ms-touch-action: none;
+    touch-action: none;
+}
+
+.draggable.-drop-possible { background-color: #42bd41; }
+
+.resize-drag {
+    background-color: #29e;
+    color: white;
+    font-size: 20px;
+    font-family: sans-serif;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 30px 20px;
+
+    width: 120px;
+
+    /* This makes things *much* easier */
+    box-sizing: border-box;
+}
+
+.resize-container {
+    width: 100%;
+    height: 240px;
+}
+svg {
+    width: 100%;
+    height: 240px;
+    background-color: #2e9;
+
+    -ms-touch-action: none;
+    touch-action: none;
+}
+.edit-rectangle {
+    fill: #92e;
+    stroke: #fff;
+
+    transition: fill 0.3s, stroke 0.3s;
+}
+.edit-rectangle.neg-w {
+    fill: #f40;
+}
+.edit-rectangle.neg-h {
+    stroke: #29e;
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 200px;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 22px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.sidenav .inputbox {
+    position: relative;
+    overflow-x: hidden;
+    left: 25px;
+    width: 70%;
+}
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
